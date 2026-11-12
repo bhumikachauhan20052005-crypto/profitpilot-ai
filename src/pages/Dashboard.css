@@ -1,0 +1,193 @@
+.dashboard-page {
+  min-height: 100vh;
+  padding: 60px 20px 100px;
+  background-color: #f8fafc;
+
+  background-image:
+    linear-gradient(rgba(99, 102, 241, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(99, 102, 241, 0.06) 1px, transparent 1px);
+
+  background-size: 40px 40px;
+}
+
+.dashboard-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* TOP BUTTONS */
+
+.dashboard-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 60px;
+}
+
+.back-btn,
+.home-btn {
+  border: none;
+  background: transparent;
+
+  color: #ff6d63;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  transform: translateX(-5px);
+}
+
+.home-btn:hover {
+  transform: translateY(-3px);
+}
+
+/* HEADER */
+
+.dashboard-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px;
+}
+
+.dashboard-header h1 {
+  font-size: 58px;
+  line-height: 1.1;
+
+  color: #111827;
+  margin: 22px 0;
+}
+
+.dashboard-header h1 span {
+  color: #ff6d63;
+}
+
+.dashboard-header p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #6b7280;
+}
+
+.dashboard-header strong {
+  color: #111827;
+}
+
+/* DASHBOARD GRID */
+
+.dashboard-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 25px;
+}
+
+/* METRIC CARD */
+
+.metric-card {
+  background: white;
+
+  border: 1px solid rgba(255, 109, 99, 0.2);
+  border-radius: 22px;
+
+  padding: 32px 25px;
+
+  transition: 0.3s;
+
+  box-shadow: 0 10px 30px rgba(17, 24, 39, 0.05);
+}
+
+.metric-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow: 0 20px 40px rgba(255, 109, 99, 0.15);
+}
+
+.metric-icon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 55px;
+  height: 55px;
+
+  background: rgba(255, 109, 99, 0.1);
+
+  border-radius: 16px;
+
+  font-size: 26px;
+
+  margin-bottom: 25px;
+}
+
+.metric-card p {
+  font-size: 15px;
+  color: #6b7280;
+
+  margin-bottom: 10px;
+}
+
+.metric-card h2 {
+  font-size: 27px;
+  color: #111827;
+}
+
+/* PROFIT CARD */
+
+.profit-metric {
+  background: linear-gradient(
+    135deg,
+    #fff5f3,
+    #fffdf0
+  );
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+  .dashboard-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dashboard-header h1 {
+    font-size: 46px;
+  }
+
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+  .dashboard-page {
+    padding: 35px 18px 70px;
+  }
+
+  .dashboard-top {
+    margin-bottom: 40px;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-header {
+    margin-bottom: 40px;
+  }
+
+  .dashboard-header h1 {
+    font-size: 38px;
+  }
+
+  .dashboard-header p {
+    font-size: 16px;
+  }
+
+}
